@@ -1,0 +1,19 @@
+{
+    "name": "sysuwlan",
+    "version": "1.0",
+    "description": "connect to wlan automatically",
+	//"default_locale": "zh_CN",
+	"manifest_version": 2,
+    "browser_action": {
+        "default_icon": "icon.png",
+        "popup": "index.html"
+    },
+    "icons": {
+        "128": "icon_128.png"
+    },
+    "permissions": [
+        "tabs",
+        "http://10.10.2.22/portal/logon.cgi"
+    ]
+}
+
