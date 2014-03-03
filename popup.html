@@ -1,9 +1,19 @@
 <html>
   <head>
+	<script type = "text/javascript" src = "js/jquery.min.js"></script>
+	<script type = "text/javascript" src = "js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
   </head>
-  <script> 
-  </script>
   <body>
-  <button>开启sysuwlan</button>
+  <div class="btn-group-vertical">
+    <button id="start" class="btn btn-default">开启</button>
+    <button id="close" class="btn btn-default">关闭</button>
+	<br/>
+    <button id="option" class="btn btn-default">选项（option）</button>
+	<span data-i18n-content="popup_options">Options</span>
+  </div>
   </body>
+	<script type = "text/javascript" src = "popup.js"></script>
+	<script type = "text/javascript" src = "sysuwlan.js"></script>
 </html>
