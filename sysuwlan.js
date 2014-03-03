@@ -1,16 +1,16 @@
 login = function(){
-  options = {
-	PtUser: localStorage["netid"],
-	PtPwd: localStorage["pwd"],
-	PtButton: 'Logon'
-  }
+  options = "PtUser=" + localStorage["netid"] + 
+	"&PtPwd=" + localStorage["pwd"] +
+	"&PtButton=" + "Logon"
+  
   console.log(options);
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "", true);
+  xhr.open("POST", "http://10.10.2.22/portal/logon.cgi");
   xhr.onreadystatechange = function (){
 	if (xhr.readyState == 4) {
-	  var res = JSON.parse(xhr.responseText);
+	  var res = (xhr.responseText);
+	  console.log(res);
 	}
   }
-  xhr.send();
+  xhr.send(options);
 }

@@ -6,7 +6,8 @@
 	"manifest_version": 2,
     "browser_action": {
         "default_icon": "icon.png",
-        "popup": "index.html"
+		"default_title": "开启sysuwlan"
+//"default_popup": "popup.html"
     },
     "icons": {
         "128": "icon_128.png"
@@ -17,7 +18,7 @@
 	"options_page": "options.html",
     "permissions": [
         "tabs",
-        "http://10.10.2.22/portal/logon.cgi",
+        "http://10.10.2.22/",
 		"http://*/*"
    ]
 }
