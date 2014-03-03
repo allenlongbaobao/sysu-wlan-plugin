@@ -19,6 +19,6 @@
         "tabs",
         "http://10.10.2.22/portal/logon.cgi",
 		"http://*/*"
-    ]
+   ]
 }
 
