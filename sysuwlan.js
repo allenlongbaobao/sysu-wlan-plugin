@@ -7,6 +7,7 @@ detect_online = function(callback){
   xhr.open("GET", "http://www.baidu.com");
   xhr.onreadystatechange = function (){
 	if (xhr.readyState == 4) {
+	  console.log (xhr);
 	  var status = xhr.status;
 	  if(status == 200){callback(true);}
 	  else callback(false);
@@ -27,8 +28,14 @@ login = function(callback){
 	  var res = (xhr.responseText);
 	  console.log(xhr);
 	  if(xhr.status == 200) { 
-		localStorage["set_is_on"] = "on";
-		callback({result: "success"});
+		detect_online(function(result){
+		  console.log (result);
+		  if(result == true){
+			localStorage["set_is_on"] = "on";
+			callback({result: "success"});
+		  }
+		  else {callback({result: "failed"});}
+		});
 	  }else 
 	  	callback({result: "failed"});
 	}

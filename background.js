@@ -1,5 +1,7 @@
 chrome.browserAction.onClicked.addListener(function(tab){ //login();
 });
+
+
 set = function(){
   var timer = setInterval(function(){
 	detect_online(function(result){
@@ -9,7 +11,9 @@ set = function(){
 			start.innerHTML = "已开启"
 		  	start.disabled = true;
 		  }
-		  else alert("开启失败！");
+		  else {
+			alert("开启失败！");
+		  }
 		});
 	  } 
 	});
